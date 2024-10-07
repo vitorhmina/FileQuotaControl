@@ -1,0 +1,11 @@
+info:
+  app:
+    name: File Quota Control
+
+dataSource:
+  url: jdbc:mariadb://localhost:3306/filequotacontrol
+  username: root
+  password: 123
+  driverClassName: org.mariadb.jdbc.Driver
+  dialect: org.hibernate.dialect.MariaDB103Dialect
+

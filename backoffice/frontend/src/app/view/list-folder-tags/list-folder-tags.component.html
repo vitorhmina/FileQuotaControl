@@ -1,0 +1,19 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company</span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Folder</span>
+  <select [(ngModel)]="selectedFolderId" name="folder" (change)="onFolderChange()">
+    <option *ngFor="let folder of folderList" [value]="folder.folderId">{{ folder.name }}</option>
+  </select>
+
+  <ng-container *ngFor="let tag of tagList">
+    <div class="tag-wrapper">
+      <div>Label: {{tag.label}}</div>
+      <div>Color: {{tag.color}} <span class="color-box" [style.backgroundColor]="tag.color"></span></div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!tagList || tagList.length === 0">Empty</ng-container>
+</div>

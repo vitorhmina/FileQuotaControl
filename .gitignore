@@ -1,0 +1,5 @@
+/.gradle/
+/.idea/
+/backoffice/backend/build/
+/backoffice/frontend/.angular/
+/backoffice/frontend/node_modules/

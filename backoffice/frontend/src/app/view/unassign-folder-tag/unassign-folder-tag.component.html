@@ -1,0 +1,16 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company </span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Folder </span>
+  <select [(ngModel)]="selectedFolderId" name="folder" (change)="onFolderChange()">
+    <option *ngFor="let folder of folderList" [value]="folder.folderId">{{ folder.name }}</option>
+  </select>
+  <span>Tag </span>
+  <select [(ngModel)]="selectedTagId" name="tag">
+    <option *ngFor="let tag of tagList" [value]="tag.tagId">{{ tag.label }}</option>
+  </select>
+  <button (click)="onButtonClick()">Delete</button>
+</div>

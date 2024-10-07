@@ -1,0 +1,10 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+
+  <ng-container *ngFor="let userType of userTypeList">
+    <div class="userType-wrapper">
+      <div>User Type: {{userType.userType}}</div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!userTypeList || userTypeList.length === 0">Empty</ng-container>
+</div>

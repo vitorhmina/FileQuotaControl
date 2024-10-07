@@ -1,0 +1,20 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company</span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Folder</span>
+  <select [(ngModel)]="selectedFolderId" name="folder" (change)="onFolderChange()">
+    <option *ngFor="let folder of folderList" [value]="folder.folderId">{{ folder.name }}</option>
+  </select>
+  <span>Document</span>
+  <select [(ngModel)]="selectedDocumentId" name="document" (change)="onDocumentChange()">
+    <option *ngFor="let document of documentList" [value]="document.documentId">{{ document.name }}</option>
+  </select>
+  <span>Link</span>
+  <select [(ngModel)]="selectedLinkableId" name="linkable">
+    <option *ngFor="let linkable of linkableList" [value]="linkable.publicLink">{{ linkable.publicLink }}</option>
+  </select>
+  <button (click)="onButtonClick()">Download</button>
+</div>

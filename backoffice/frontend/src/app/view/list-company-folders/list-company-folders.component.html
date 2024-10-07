@@ -1,0 +1,16 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+
+  <ng-container *ngFor="let folder of folderList">
+    <div class="folder-wrapper">
+      <div>Name: {{ folder.name }}</div>
+      <div>Creation Date: {{ folder.creationDate }}</div>
+      <div>Status: {{ folder.status }}</div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!folderList || folderList.length === 0">No folders available.</ng-container>
+</div>

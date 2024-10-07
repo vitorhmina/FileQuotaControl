@@ -1,0 +1,10 @@
+CREATE TABLE USER_TYPE (
+    id         BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_type  VARCHAR(255) unique NOT NULL
+);
+
+INSERT INTO USER_TYPE (user_type)
+VALUES ('ADMIN');
+
+INSERT INTO USER_TYPE (user_type)
+VALUES ('USER');

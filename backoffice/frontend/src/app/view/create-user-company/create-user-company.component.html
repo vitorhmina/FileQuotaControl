@@ -1,0 +1,14 @@
+<div class="save-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company </span>
+  <select [(ngModel)]="selectedCompanyId" name="company">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>User </span>
+  <select [(ngModel)]="selectedUserId" name="user">
+    <option *ngFor="let user of userList" [value]="user.userId">{{ user.username }}</option>
+  </select>
+  <span>Role</span>
+  <input id="role" type="text" [(ngModel)]="role"/>
+  <button (click)="onButtonClick()">Submit</button>
+</div>

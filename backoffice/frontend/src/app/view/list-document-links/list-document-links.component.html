@@ -1,0 +1,23 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company</span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Folder</span>
+  <select [(ngModel)]="selectedFolderId" name="folder" (change)="onFolderChange()">
+    <option *ngFor="let folder of folderList" [value]="folder.folderId">{{ folder.name }}</option>
+  </select>
+  <span>Document</span>
+  <select [(ngModel)]="selectedDocumentId" name="document" (change)="onDocumentChange()">
+    <option *ngFor="let document of documentList" [value]="document.documentId">{{ document.name }}</option>
+  </select>
+
+  <ng-container *ngFor="let linkable of linkableList">
+    <div class="tag-wrapper">
+      <div>Link: {{linkable.publicLink}}</div>
+      <div>Expiration Date: {{linkable.publicExpiration}}</div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!linkableList || linkableList.length === 0">Empty</ng-container>
+</div>

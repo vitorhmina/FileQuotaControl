@@ -1,0 +1,12 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company </span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>User </span>
+  <select [(ngModel)]="selectedUserCompanyId" name="userCompany">
+    <option *ngFor="let userCompany of userCompanyList" [value]="userCompany.userCompanyId">{{ userCompany.role }}</option>
+  </select>
+  <button (click)="onButtonClick()">Delete</button>
+</div>

@@ -1,0 +1,18 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>User </span>
+  <select [(ngModel)]="selectedUserId" name="user" (change)="onUserSelect()">
+    <option *ngFor="let user of userList" [value]="user.userId">{{ user.username }}</option>
+  </select>
+  <span>New Username </span>
+  <input id="username" type="text" [(ngModel)]="username"/>
+  <span>New First Name </span>
+  <input id="firstName" type="text" [(ngModel)]="firstName"/>
+  <span>New Last Name </span>
+  <input id="lastName" type="text" [(ngModel)]="lastName"/>
+  <span>New Email </span>
+  <input id="email" type="text" [(ngModel)]="email"/>
+  <span>New Password </span>
+  <input id="password" type="text" [(ngModel)]="password"/>
+  <button (click)="onButtonClick()">Update</button>
+</div>

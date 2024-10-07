@@ -1,0 +1,13 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+
+  <ng-container *ngFor="let user of userList">
+    <div class="user-wrapper">
+      <div>Username: {{user.username}}</div>
+      <div>First Name: {{user.firstName}}</div>
+      <div>Last Name: {{user.lastName}}</div>
+      <div>Email: {{user.email}}</div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!userList || userList.length === 0">Empty</ng-container>
+</div>

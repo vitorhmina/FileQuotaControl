@@ -1,0 +1,18 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company </span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Folder </span>
+  <select [(ngModel)]="selectedFolderId" name="folder" (change)="onFolderChange()">
+    <option *ngFor="let folder of folderList" [value]="folder.folderId">{{ folder.name }}</option>
+  </select>
+  <span>Document </span>
+  <select [(ngModel)]="documentId" name="document">
+    <option *ngFor="let document of documentList" [value]="document.documentId">{{ document.name }}</option>
+  </select>
+  <span>Interval In Days </span>
+  <input id="interval" type="text" [(ngModel)]="interval"/>
+  <button (click)="onButtonClick()">Submit</button>
+</div>

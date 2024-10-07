@@ -1,0 +1,12 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company </span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanySelect()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>New Title </span>
+  <input id="title" type="text" [(ngModel)]="title"/>
+  <span>New Quota </span>
+  <input id="quota" type="text" [(ngModel)]="quota"/>
+  <button (click)="onButtonClick()">Update</button>
+</div>

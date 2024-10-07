@@ -1,0 +1,19 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company </span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Tag </span>
+  <select [(ngModel)]="selectedTagId" name="tag" (change)="onTagSelect()">
+    <option *ngFor="let tag of tagList" [value]="tag.tagId">
+      {{ tag.label }} - {{tag.color}}
+      <span class="color-box" [style.backgroundColor]="tag.color"></span>
+    </option>
+  </select>
+  <span>New Label </span>
+  <input id="label" type="text" [(ngModel)]="label"/>
+  <span>New Color </span>
+  <input id="color" type="text" [(ngModel)]="color"/>
+  <button (click)="onButtonClick()">Update</button>
+</div>

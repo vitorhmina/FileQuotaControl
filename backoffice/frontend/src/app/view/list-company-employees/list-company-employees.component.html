@@ -1,0 +1,17 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+
+  <div *ngFor="let userCompany of userCompanyList">
+    <div class="tag-wrapper">
+
+    <div>Role: {{ userCompany.role }}</div>
+    <div>Username: {{ userCompany.username }}</div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="!userCompanyList || userCompanyList.length === 0">No users in the selected company</ng-container>
+</div>

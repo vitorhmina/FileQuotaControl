@@ -1,0 +1,11 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <select [(ngModel)]="companyId" name="company">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Label </span>
+  <input id="label" type="text" [(ngModel)]="label"/>
+  <span>Color </span>
+  <input id="color" type="text" [(ngModel)]="color"/>
+  <button (click)="onButtonClick()">Submit</button>
+</div>

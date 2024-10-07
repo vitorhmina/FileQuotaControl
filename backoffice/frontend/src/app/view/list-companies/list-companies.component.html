@@ -1,0 +1,11 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+
+  <ng-container *ngFor="let company of companyList">
+    <div class="company-wrapper">
+      <div>Title: {{company.title}}</div>
+      <div>Quota: {{company.quota}}</div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!companyList || companyList.length === 0">Empty</ng-container>
+</div>

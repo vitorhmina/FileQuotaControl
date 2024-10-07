@@ -1,0 +1,20 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>Company</span>
+  <select [(ngModel)]="selectedCompanyId" name="company" (change)="onCompanyChange()">
+    <option *ngFor="let company of companyList" [value]="company.companyId">{{ company.title }}</option>
+  </select>
+  <span>Folder</span>
+  <select [(ngModel)]="selectedFolderId" name="folder" (change)="onFolderChange()">
+    <option *ngFor="let folder of folderList" [value]="folder.folderId">{{ folder.name }}</option>
+  </select>
+
+  <ng-container *ngFor="let folder of deletedFolderList">
+    <div class="folder-wrapper">
+      <div>Name: {{ folder.name }}</div>
+      <div>Creation Date: {{ folder.creationDate }}</div>
+      <div>Status: {{ folder.status }}</div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!folderList || folderList.length === 0">No folders available.</ng-container>
+</div>

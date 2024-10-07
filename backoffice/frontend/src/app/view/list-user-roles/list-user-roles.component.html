@@ -1,0 +1,13 @@
+<div class="list-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+
+  <div *ngFor="let userCompany of userCompanyList">
+    <div class="tag-wrapper">
+
+    <div>Role: {{ userCompany.role }}</div>
+    <div>Company: {{ userCompany.companyName }}</div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="!userCompanyList || userCompanyList.length === 0">No users in the selected company</ng-container>
+</div>

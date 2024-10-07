@@ -1,0 +1,8 @@
+<div class="create-wrapper">
+  <p><a href="/#app/home">Home</a></p>
+  <span>User </span>
+  <select [(ngModel)]="selectedUserId" name="user">
+    <option *ngFor="let user of userList" [value]="user.userId">{{ user.username }}</option>
+  </select>
+  <button (click)="onButtonClick()">Delete</button>
+</div>

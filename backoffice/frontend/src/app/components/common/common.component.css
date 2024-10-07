@@ -1,0 +1,12 @@
+.sidebar-footer {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+
+.header-background {
+  background: white;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+}
