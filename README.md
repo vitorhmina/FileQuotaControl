@@ -51,27 +51,24 @@ Open Intellij create a new project from existing sources:
 
 Choose the project folder and follow the import steps:
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <div style="margin: 10px;">
-    <img src="https://i.imgur.com/cQNSyzt.png" style="max-width: 200px; height: auto;">
-  </div>
-  <div style="margin: 10px;">
-    <img src="https://i.imgur.com/4j4y6VE.png" style="max-width: 200px; height: auto;">
-  </div>
-  <div style="margin: 10px;">
-    <img src="https://i.imgur.com/Rceuc8t.png" style="max-width: 200px; height: auto;">
-  </div>
-  <div style="margin: 10px;">
-    <img src="https://i.imgur.com/mxcL7BQ.png" style="max-width: 200px; height: auto;">
-  </div>
-  <div style="margin: 10px;">
-    <img src="https://i.imgur.com/FMuYSes.png" style="max-width: 200px; height: auto;">
-  </div>
-  <div style="margin: 10px;">
-    <img src="https://i.imgur.com/0R25nV4.png" style="max-width: 200px; height: auto;">
-  </div>
-</div>
-
+<p align="center">
+  <img src="https://i.imgur.com/cQNSyzt.png">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/4j4y6VE.png">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/Rceuc8t.png">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/mxcL7BQ.png">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/FMuYSes.png">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/0R25nV4.png">
+</p>
 
 At this point the project should open on **IntelliJ** and it should be detected automatically that it is a **Gradle** project:
 
