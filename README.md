@@ -34,9 +34,6 @@ Before you can run the application locally, make sure you have the following too
 - **Git**: [Download Git](https://git-scm.com/download/win)
 - **MariaDB**: [Download MariaDB](https://mariadb.org/download/)
 
-  
-
-
 ## Project Setup
 
 First, clone the repository from the `main` branch:
@@ -46,8 +43,9 @@ git clone -b main https://github.com/vitorhmina/FileQuotaControl.git
 ```
 Open Intellij create a new project from existing sources:
 
-![enter image description here](https://i.imgur.com/dJVBCkV.png)
-
+<p align="center">
+  <img src="https://i.imgur.com/dJVBCkV.png">
+</p>
 
 Choose the project folder and follow the import steps:
 
@@ -117,3 +115,7 @@ And for the backend you can run **bootRun** on the **Gradle** tab:
 </p>
 
 Once everything is running, you can open the application in your browser at: **[http://localhost:1212](http://localhost:1212)**
+
+## Video Demonstration
+
+[Project Demonstration Video](https://youtu.be/M-OYNWQiahU)
